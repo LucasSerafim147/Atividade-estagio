@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000;
+}
+
+header {
+    padding: 1rem;
+    text-align: center;
+    background-color: #f8ce77;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+main {
+    padding: 0;
+}
+
+.Inicio {
+    background-color: #f9ce89;
+    text-align: center;
+    padding: 1rem;
+}
+
+.TextoInicio h1 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.TextoInicio p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.Botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.Botoes input,
+.Botoes button {
+    height: 35px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.Botoes input {
+    background-color: white;
+}
+
+.Botoes button {
+    background-color: #ffc107;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Botoes button:hover {
+    background-color: #e0a800;
+}
+
+.imagem img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.Secao {
+    text-align: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 1rem;
+}
+
+.Secao h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.Secao p {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.Secao .estrela,
+.Secao .repetir,
+.Secao .foguinho,
+.Secao .fone {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.destinos {
+    text-align: center;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.destinos h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.destinos p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.estacoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.imagem-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.imagem-container:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.imagem-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.texto-sobre-imagem {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.Objetivo {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    text-align: justify;
+    background-color: #fff;
+}
+
+.Objetivo img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.texto-objetivo {
+    padding: 1rem;
+    text-align: justify;
+}
+
+.texto-objetivo h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.Objetivo p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+.dados_viagens {
+    padding: 1rem;
+}
+
+.dados_viagens ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dados_viagens li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    word-spacing: 3px;
+}
+
+.dados_viagens h3 {
+    color: #f5a623;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.dados_viagens p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.fundo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9ce89;
+    border-radius: 8px;
+    margin: 1rem;
+}
+
+.fundo img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.fundo h3 {
+    font-size: 2rem;
+}
+
+.fundo p {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #555;
+}
+
+footer {
+    padding: 2rem;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    font-size: 1rem;
+    border: #000;
+}
+
+footer .icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+footer .icons a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .icons a:hover {
+    color: #f5a623;
+}
+
+footer .icons i {
+    font-size: 1.5rem;
+}
+
+
+@media (min-width: 768px) {
+    header {
+        text-align: left;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .Inicio {
+        padding: 2rem 1rem;
+    }
+
+    .TextoInicio h1 {
+        font-size: 2rem;
+    }
+
+    .TextoInicio p {
+        font-size: 1.25rem;
+    }
+
+    .Botoes {
+        max-width: 500px;
+        margin: 0 auto 1.5rem;
+        gap: 1rem;
+    }
+
+    .Botoes input,
+    .Botoes button {
+        height: 37px;
+        font-size: 1rem;
+    }
+
+    .imagem img {
+        margin-bottom: 1.5rem;
+    }
+
+    .Secao {
+        padding: 2rem 1rem;
+        margin: 2rem auto;
+        max-width: 800px;
+    }
+
+    .Secao h1 {
+        font-size: 2.5rem;
+    }
+
+    .Secao p {
+        font-size: 1.25rem;
+    }
+
+    .Secao .estrela,
+    .Secao .repetir,
+    .Secao .foguinho,
+    .Secao .fone {
+        font-size: 2rem;
+    }
+
+    .destinos {
+        padding: 2rem 1rem;
+    }
+
+    .destinos h1 {
+        font-size: 2rem;
+    }
+
+    .destinos p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .estacoes {
+        gap: 2rem;
+    }
+
+    .imagem-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .texto-sobre-imagem {
+        font-size: 1.2rem;
+        padding: 5px 10px;
+    }
+
+    .Objetivo {
+        margin-bottom: 1.5rem;
+    }
+
+    .Objetivo img {
+        height: 350px;
+    }
+
+    .texto-objetivo {
+        padding: 50px;
+    }
+
+    .texto-objetivo h1 {
+        font-size: 35px;
+    }
+
+    .Objetivo p {
+        font-size: larger;
+    }
+
+    .dados_viagens ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 2rem;
+    }
+
+    .dados_viagens li {
+        margin-bottom: 0;
+    }
+
+    .dados_viagens h3 {
+        font-size: 2rem;
+    }
+
+    .dados_viagens p {
+        font-size: 1rem;
+    }
+
+    .fundo {
+        padding: 10rem;
+    }
+
+    .fundo h3 {
+        font-size: 45px;
+    }
+
+    .fundo p {
+        font-size: 25px;
+    }
+
+    footer {
+        padding: 3rem;
+        font-size: 1.2rem;
+    }
+
+    footer .icons {
+        gap: 1.5rem;
+    }
+
+    footer .icons i {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .Inicio {
+        padding: 2rem;
+    }
+
+    .Secao {
+        padding: 2rem;
+    }
+
+    .destinos {
+        padding: 2rem;
+    }
+
+    .imagem-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    footer {
+        padding: 4rem;
+        font-size: 1.4rem;
+    }
+
+    footer .icons {
+        gap: 2rem;
+    }
+
+    footer .icons i {
+        font-size: 2.5rem;
+    }
+}
