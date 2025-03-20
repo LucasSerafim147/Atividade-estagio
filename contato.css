@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif; 
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    background-color: #fac761;
+}
+    
+
+
+.header__lista{
+    display: none;
+}
+
+header {
+    
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        width: 100%;
+        padding: 10px;
+        background-color: #f8ce77;  
+}
+.hamburguer {
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    margin-left: auto; 
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.formulario h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 250x;
+    
+}
+
+
+.Botoes{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-top: 50px;
+    gap: 15px;
+   
+}
+
+.Botoes input{
+
+    width: 300px;
+    height: 37px;
+    border: 1px solid #ccc;
+
+
+}
+
+.Botoes :placeholder{
+    color: #333;
+}
+
+.mensagem__maior input{
+    height: 200px;
+
+}
+
+button{
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+padding-top: 20;
+gap: 15px;
+height: 40px;
+width: 200px;
+background-color: rgb(218, 146, 12);
+margin-bottom: 20px;
+
+
+
+}
+
+footer {
+    width: 100%;
+    background-color: #fafafa;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 60px;
+    margin-top: auto; 
+}
+
+.icones__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.icones__footer i {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.icones__footer i:hover {
+    color: #f8ce77; 
+}
+
+@media(min-width: 768){
+
+
+.header__lista{
+    display: block;
+}
+
+.Botoes input{
+
+    width: 400px;
+    height: 30px;
+    border: 1px solid #ccc;
+
+
+}
+
+}
+
+

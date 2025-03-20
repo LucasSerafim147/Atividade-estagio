@@ -1,33 +1,15 @@
-.principal {
-    background-color: #f9ce89;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-footer {
-    width: 100%;
-    height: auto;
-    background-color: #fafafa;
-    color: black;
+body {
+    font-family: Arial, sans-serif; 
+    min-height: 100vh; 
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.icones__footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-main img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
+    flex-direction: column;
 }
 
 header {
@@ -39,8 +21,68 @@ header {
     width: 100%;
 }
 
+header h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
 .hamburguer {
     cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.principal {
+    background-color: #f9ce89;
+    text-align: top;
+    padding: 20px;
+    width: 100%;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.principal img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.principal h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+footer {
+    width: 100%;
+    background-color: #fafafa;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 150px;
+}
+
+.icones__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.icones__footer i {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.icones__footer i:hover {
+    color: #f8ce77; 
 }
 
 @media (max-width: 768px) {
@@ -57,6 +99,10 @@ header {
         padding: 10px;
     }
 
+    .principal img {
+        max-width: 400px;
+    }
+
     footer {
         padding: 10px;
     }
@@ -67,11 +113,15 @@ header {
 }
 
 @media (max-width: 480px) {
-    main img {
-        max-width: 100%;
+    .principal img {
+        max-width: 300px;
     }
 
     .icones__footer {
         gap: 10px;
+    }
+
+    .icones__footer i {
+        font-size: 1.2rem;
     }
 }
