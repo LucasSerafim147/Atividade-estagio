@@ -5,15 +5,18 @@
 }
 
 body {
-    background-color: #fafafa;
+    background-color: white;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #000;
 }
+.header__lista{
+    display: none;
+}
 
 header {
     padding: 1rem;
-    text-align: center;
+    text-align: left;
     background-color: #f8ce77;
 }
 
@@ -24,6 +27,12 @@ header h1 {
 
 main {
     padding: 0;
+}
+
+.hamburguer {
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
 }
 
 .Inicio {
@@ -47,6 +56,7 @@ main {
     flex-direction: column;
     gap: 0.75rem;
     margin-bottom: 1rem;
+    padding: 0 1rem;
 }
 
 .Botoes input,
@@ -87,6 +97,7 @@ main {
     background-color: #fff;
     border-radius: 8px;
     margin: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .Secao h1 {
@@ -175,10 +186,11 @@ main {
     background-color: #fff;
 }
 
-.Objetivo img {
+.dados_viagens img {
     height: 200px;
     width: 100%;
     object-fit: cover;
+    align-items: center;
 }
 
 .texto-objetivo {
@@ -189,13 +201,15 @@ main {
 .texto-objetivo h1 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    justify-content: center;
+    text-align: center;
 }
 
 .Objetivo p {
     font-family: Arial, Helvetica, sans-serif;
     color: gray;
     font-size: 0.9rem;
-    text-align: justify;
+    text-align: center;
 }
 
 .dados_viagens {
@@ -203,8 +217,9 @@ main {
 }
 
 .dados_viagens ul {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -216,7 +231,6 @@ main {
     align-items: center;
     text-align: center;
     margin-bottom: 1rem;
-    word-spacing: 3px;
 }
 
 .dados_viagens h3 {
@@ -236,42 +250,48 @@ main {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    padding: 4rem;
     background-color: #f9ce89;
     border-radius: 8px;
-    margin: 1rem;
+    margin: 2rem;
 }
 
 .fundo img {
     max-width: 100%;
-    height: auto;
+    height: 250px;
     margin-bottom: 1rem;
+    padding: 20px;
+    filter: grayscale(100%);
 }
 
 .fundo h3 {
-    font-size: 2rem;
+    
+    color: black;
+   
 }
 
 .fundo p {
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     color: #555;
+    text-align: justify;
+   
 }
 
 footer {
-    padding: 2rem;
+    padding: 1rem;
     background-color: #fff;
     color: #000;
     text-align: center;
-    font-size: 1rem;
-    border: #000;
+    font-size: 0.9rem;
 }
 
 footer .icons {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
-    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 footer .icons a {
@@ -288,154 +308,93 @@ footer .icons i {
     font-size: 1.5rem;
 }
 
+footer .icons p {
+    font-size: 0.9rem;
+    margin: 0;
+}
 
-@media (min-width: 768px) {
-    header {
-        text-align: left;
+@media (max-width: 768px) {
+    .dados_viagens ul {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 
+    .fundo {
+        padding: 1rem;
+    }
+
+    .fundo h3 {
+        font-size: 1.5rem;
+    }
+
+    .fundo p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
     header h1 {
-        font-size: 2rem;
-    }
-
-    .Inicio {
-        padding: 2rem 1rem;
-    }
-
-    .TextoInicio h1 {
-        font-size: 2rem;
-    }
-
-    .TextoInicio p {
         font-size: 1.25rem;
     }
 
-    .Botoes {
-        max-width: 500px;
-        margin: 0 auto 1.5rem;
-        gap: 1rem;
+    .TextoInicio h1 {
+        font-size: 1rem;
+    }
+
+    .TextoInicio p {
+        font-size: 0.8rem;
     }
 
     .Botoes input,
     .Botoes button {
-        height: 37px;
-        font-size: 1rem;
-    }
-
-    .imagem img {
-        margin-bottom: 1.5rem;
-    }
-
-    .Secao {
-        padding: 2rem 1rem;
-        margin: 2rem auto;
-        max-width: 800px;
+        font-size: 0.8rem;
     }
 
     .Secao h1 {
-        font-size: 2.5rem;
-    }
-
-    .Secao p {
         font-size: 1.25rem;
     }
 
-    .Secao .estrela,
-    .Secao .repetir,
-    .Secao .foguinho,
-    .Secao .fone {
-        font-size: 2rem;
-    }
-
-    .destinos {
-        padding: 2rem 1rem;
+    .Secao p {
+        font-size: 0.8rem;
     }
 
     .destinos h1 {
-        font-size: 2rem;
+        font-size: 1.25rem;
     }
 
     .destinos p {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .estacoes {
-        gap: 2rem;
-    }
-
-    .imagem-container {
-        width: 250px;
-        height: 250px;
-    }
-
-    .texto-sobre-imagem {
-        font-size: 1.2rem;
-        padding: 5px 10px;
-    }
-
-    .Objetivo {
-        margin-bottom: 1.5rem;
-    }
-
-    .Objetivo img {
-        height: 350px;
-    }
-
-    .texto-objetivo {
-        padding: 50px;
-    }
-
-    .texto-objetivo h1 {
-        font-size: 35px;
-    }
-
-    .Objetivo p {
-        font-size: larger;
+        font-size: 0.8rem;
     }
 
     .dados_viagens ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, auto);
-        gap: 2rem;
-    }
-
-    .dados_viagens li {
-        margin-bottom: 0;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 
     .dados_viagens h3 {
-        font-size: 2rem;
+        font-size: 1.25rem;
     }
 
     .dados_viagens p {
-        font-size: 1rem;
-    }
-
-    .fundo {
-        padding: 10rem;
+        font-size: 0.8rem;
     }
 
     .fundo h3 {
-        font-size: 45px;
+        font-size: 1.25rem;
     }
 
     .fundo p {
-        font-size: 25px;
+        font-size: 0.8rem;
     }
 
     footer {
-        padding: 3rem;
-        font-size: 1.2rem;
-    }
-
-    footer .icons {
-        gap: 1.5rem;
+        padding: 0.5rem;
     }
 
     footer .icons i {
-        font-size: 2rem;
+        font-size: 1.25rem;
+    }
+
+    footer .icons p {
+        font-size: 0.8rem;
     }
 }
 
@@ -463,8 +422,9 @@ footer .icons i {
     }
 
     footer {
-        padding: 4rem;
+        padding: 3rem;
         font-size: 1.4rem;
+        background-color: #fafafa;
     }
 
     footer .icons {
