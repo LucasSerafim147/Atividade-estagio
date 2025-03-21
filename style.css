@@ -465,4 +465,15 @@ footer .icons p {
     footer .icons i {
         font-size: 2.5rem;
     }
+
+
+    .header__lista{
+
+        display: flex;
+        align-items: center;
+        text-align:  center;
+        justify-content: center;
+
+
+    }
 }
