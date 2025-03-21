@@ -163,6 +163,7 @@ main {
     overflow: hidden;
     border-radius: 8px;
     transition: transform 0.3s ease;
+    object-position: bottom;
 }
 
 .imagem-container:hover img {
@@ -177,6 +178,7 @@ main {
     object-fit: cover;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
+    object-position: bottom;
 }
 
 .texto-sobre-imagem {
